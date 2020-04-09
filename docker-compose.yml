@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  apoli:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./apoli:/apoli
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:3000"
